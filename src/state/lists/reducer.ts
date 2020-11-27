@@ -4,7 +4,7 @@ import { TokenList } from '@uniswap/token-lists/dist/types'
 import { DEFAULT_LIST_OF_LISTS, DEFAULT_TOKEN_LIST_URL } from '../../constants/lists'
 import { updateVersion } from '../global/actions'
 import { acceptListUpdate, addList, fetchTokenList, removeList, selectList } from './actions'
-import UNISWAP_DEFAULT_LIST from '../../tokenlist.json'
+import DEFAULT_LIST from '../../constants/token/keeper.json'
 
 export interface ListsState {
   readonly byUrl: {
@@ -38,12 +38,12 @@ const initialState: ListsState = {
     }, {}),
     [DEFAULT_TOKEN_LIST_URL]: {
       error: null,
-      current: UNISWAP_DEFAULT_LIST,
+      current: DEFAULT_LIST,
       loadingRequestId: null,
       pendingUpdate: null
     }
   },
-  selectedListUrl: undefined
+  selectedListUrl: DEFAULT_TOKEN_LIST_URL
 }
 
 export default createReducer(initialState, builder =>

@@ -6,10 +6,10 @@
     "minor": 0,
     "patch": 3
   },
-  "logoURI": "https://raw.githubusercontent.com/omgswap/public-assets/master/tokenlist/favicon.png",
+  "logoURI": "https://raw.githubusercontent.com/kp2r-network/keeper-swap/master/public/favicon.ico",
   "keywords": [
-            "omgswap", 
-            "default", 
+            "keeperswap",
+            "default",
             "list"
                 ],
   "tokens": [
