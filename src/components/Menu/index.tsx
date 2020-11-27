@@ -94,7 +94,7 @@ export default function Menu() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://omgswap.link/">
+          <MenuItem id="link" href="https://info.uniswap.org/">
             <PieChart size={14} />
             Analytics
           </MenuItem>
