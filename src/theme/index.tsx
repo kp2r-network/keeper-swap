@@ -1,4 +1,3 @@
-import { transparentize } from 'polished'
 import React, { useMemo } from 'react'
 import styled, {
   ThemeProvider as StyledComponentsThemeProvider,
@@ -43,7 +42,7 @@ export function colors(darkMode: boolean): Colors {
     // text
     text1: darkMode ? '#FFFFFF' : '#000000',
     text2: darkMode ? '#c6c9d6' : '#515872',
-    text3: darkMode ? '#788988' : '#888D9B',
+    text3: darkMode ? '#9699a2' : '#888D9B',
     text4: darkMode ? '#515872' : '#c6c9d6',
     text5: darkMode ? '#232733' : '#fff8fb',
 
@@ -52,7 +51,7 @@ export function colors(darkMode: boolean): Colors {
     bg2: darkMode ? '#232733' : '#e7ebf4',
     bg3: darkMode ? '#3d4359' : '#fff8fb',
     bg4: darkMode ? '#515872' : '#D6DCDD',
-    bg5: darkMode ? '#788988' : '#888D9B',
+    bg5: darkMode ? '#9699a2' : '#888D9B',
 
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
@@ -213,10 +212,5 @@ body {
   min-height: 100vh;
   background-position: 0 -30vh;
   background-repeat: no-repeat;
-  background-image: ${({ theme }) =>
-    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.9, theme.primary1)} 0%, ${transparentize(
-      1,
-      theme.bg1
-    )} 100%)`};
 }
 `

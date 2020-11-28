@@ -4,6 +4,8 @@ import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
 
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
+import { darken } from 'polished'
 
 import Logo from '../../assets/svg/omgswap-green.png'
 import LogoDark from '../../assets/svg/omgswap-green.png'
@@ -17,6 +19,7 @@ import Menu from '../Menu'
 
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
+import { ExternalLink } from '../../theme'
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -42,6 +45,23 @@ const HeaderElement = styled.div`
 const HeaderElementWrap = styled.div`
   display: flex;
   align-items: center;
+
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    margin-top: 0.5rem;
+`};
+`
+const HeaderMob = styled.div`
+  display: contents;
+
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    display: grid;
+    justify-content: center;
+`};
+`
+const HeaderNav = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px;
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
     margin-top: 0.5rem;
@@ -85,16 +105,69 @@ const NetworkCard = styled(YellowCard)`
   padding: 8px 12px;
 `
 
+const activeClassName = 'ACTIVE'
+
+const StyledNavLink = styled(NavLink).attrs({
+  activeClassName
+})`
+  ${({ theme }) => theme.flexRowNoWrap}
+  align-items: left;
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: ${({ theme }) => theme.text2};
+  font-size: 1.2rem;
+  width: fit-content;
+  margin: 0 12px;
+  font-weight: 500;
+  &.${activeClassName} {
+    border-radius: 12px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.text1};
+  }
+  :hover,
+  :focus {
+    color: ${({ theme }) => darken(0.1, theme.text1)};
+  }
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+      margin: 0 4px;
+`}
+`
+
+const StyledExternalLink = styled(ExternalLink).attrs({
+  activeClassName
+})<{ isActive?: boolean }>`
+  ${({ theme }) => theme.flexRowNoWrap}
+  align-items: left;
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: ${({ theme }) => theme.text2};
+  font-size: 1.2rem;
+  width: fit-content;
+  margin: 0 12px;
+  font-weight: 500;
+  &.${activeClassName} {
+    border-radius: 12px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.text1};
+  }
+  :hover,
+  :focus {
+    color: ${({ theme }) => darken(0.1, theme.text1)};
+  }
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+      margin: 0 4px;
+`}
+`
+
 const UniIcon = styled.div`
   transition: transform 0.3s ease;
   :hover {
     transform: rotate(-5deg);
   }
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    img {
-      width: 4.5rem;
-    }
-  `};
 `
 
 const HeaderControls = styled.div`
@@ -110,7 +183,7 @@ const HeaderControls = styled.div`
 
 const BalanceText = styled(Text)`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    display: none;
+    display: flex;
   `};
 `
 
@@ -131,6 +204,7 @@ export default function Header() {
   return (
     <HeaderFrame>
       <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
+      <HeaderMob>
         <HeaderElement>
           <Title href=".">
             <UniIcon>
@@ -138,6 +212,36 @@ export default function Header() {
             </UniIcon>
             </Title>
         </HeaderElement>
+        <HeaderNav>
+        <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
+           Swap
+         </StyledNavLink>
+         <StyledNavLink
+           id={`pool-nav-link`}
+           to={'/pool'}
+           isActive={(match, { pathname }) =>
+             Boolean(match) ||
+             pathname.startsWith('/add') ||
+             pathname.startsWith('/remove') ||
+             pathname.startsWith('/create') ||
+             pathname.startsWith('/find')
+           }
+         >
+           Pool
+         </StyledNavLink>
+         <StyledExternalLink id={`stake-nav-link`} href={'https://kp2r.network/keep2r'}>
+           Keep2r
+         </StyledExternalLink>
+         <StyledExternalLink id={`stake-nav-link`} href={'https://kp2r.network/governance'}>
+           Governance
+         </StyledExternalLink>
+         <StyledExternalLink id={`stake-nav-link`} href={'https://feed.kp2r.network/'}>
+           Feed
+         </StyledExternalLink>
+         <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
+           Charts
+         </StyledExternalLink>
+        </HeaderNav>
         <HeaderControls>
           <HeaderElement>
             <TestnetWrapper>
@@ -157,6 +261,7 @@ export default function Header() {
             <Menu />
           </HeaderElementWrap>
         </HeaderControls>
+        </HeaderMob>
       </RowBetween>
     </HeaderFrame>
   )

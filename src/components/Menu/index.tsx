@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Info, Code, PieChart, MessageCircle, Award, Codesandbox } from 'react-feather'
+import { Info, Code, PieChart, MessageCircle } from 'react-feather'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -78,7 +78,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/omgswap'
+const CODE_LINK = 'https://github.com/kp2r-network/keeper-swap'
 
 export default function Menu() {
   const node = useRef<HTMLDivElement>()
@@ -98,15 +98,7 @@ export default function Menu() {
             <PieChart size={14} />
             Analytics
           </MenuItem>
-          <MenuItem id="link" href="https://omgswap.in/">
-            <Codesandbox size={14} />
-            DEX
-          </MenuItem>
-          <MenuItem id="link" href="https://omgswap.in/">
-            <Award size={14} />
-            Reward
-          </MenuItem>
-          <MenuItem id="link" href="https://omgswap.in/">
+          <MenuItem id="link" href="https://github.com/kp2r-network">
             <Info size={14} />
             About
           </MenuItem>
@@ -114,7 +106,7 @@ export default function Menu() {
             <Code size={14} />
             Code
           </MenuItem>
-          <MenuItem id="link" href="https://t.me/omegadefi">
+          <MenuItem id="link" href="https://t.me/kp2rnetwork">
             <MessageCircle size={14} />
             Chat
           </MenuItem>
