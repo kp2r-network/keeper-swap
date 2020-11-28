@@ -56,6 +56,7 @@ const HeaderMob = styled.div`
   ${({ theme }) => theme.mediaWidth.upToSmall`
     display: grid;
     justify-content: center;
+    width: 100%;
 `};
 `
 const HeaderNav = styled.div`
@@ -176,8 +177,8 @@ const HeaderControls = styled.div`
   align-items: center;
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
-    flex-direction: column;
     align-items: flex-end;
+    padding-bottom: 20px;
   `};
 `
 
