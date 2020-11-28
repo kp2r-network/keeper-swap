@@ -70,7 +70,7 @@ const EmojiWrapper = styled.div`
   position: absolute;
   bottom: -6px;
   right: 0px;
-  font-size: 14px;
+  font-size: 18px;
 `
 
 const StyledMenu = styled.div`
@@ -89,7 +89,7 @@ const MenuFlyout = styled.span`
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.01);
 
-  border: 1px solid ${({ theme }) => theme.bg3};
+  border: 2px solid ${({ theme }) => theme.bg3};
 
   border-radius: 0.5rem;
   display: flex;
@@ -193,7 +193,7 @@ export default function SettingsTab() {
       {open && (
         <MenuFlyout>
           <AutoColumn gap="md" style={{ padding: '1rem' }}>
-            <Text fontWeight={600} fontSize={14}>
+            <Text fontWeight={600} fontSize={18}>
               Transaction Settings
             </Text>
             <TransactionSettings
@@ -202,12 +202,12 @@ export default function SettingsTab() {
               deadline={deadline}
               setDeadline={setDeadline}
             />
-            <Text fontWeight={600} fontSize={14}>
+            <Text fontWeight={600} fontSize={18}>
               Interface Settings
             </Text>
             <RowBetween>
               <RowFixed>
-                <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
+                <TYPE.black fontWeight={400} fontSize={18} color={theme.text2}>
                   Toggle Expert Mode
                 </TYPE.black>
                 <QuestionHelper text="Bypasses confirmation modals and allows high slippage trades. Use at your own risk." />
@@ -230,7 +230,7 @@ export default function SettingsTab() {
             </RowBetween>
             <RowBetween>
               <RowFixed>
-                <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
+                <TYPE.black fontWeight={400} fontSize={18} color={theme.text2}>
                   Toggle Dark Mode
                 </TYPE.black>
               </RowFixed>

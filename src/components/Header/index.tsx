@@ -88,7 +88,7 @@ const AccountElement = styled.div<{ active: boolean }>`
   width: 100%;
 
   :focus {
-    border: 1px solid blue;
+    border: 2px solid blue;
   }
 `
 
@@ -130,6 +130,7 @@ const StyledNavLink = styled(NavLink).attrs({
   :focus {
     color: ${({ theme }) => darken(0.1, theme.text1)};
     border-bottom: 3px solid #394053;
+    text-decoration: none;
   }
   ${({ theme }) => theme.mediaWidth.upToSmall`
       margin: 0 4px;
@@ -158,6 +159,7 @@ const StyledExternalLink = styled(ExternalLink).attrs({
   :focus {
     color: ${({ theme }) => darken(0.1, theme.text1)};
     border-bottom: 3px solid #394053;
+    text-decoration: none;
   }
   ${({ theme }) => theme.mediaWidth.upToSmall`
       margin: 0 4px;

@@ -26,14 +26,14 @@ const FancyButton = styled.button`
   font-size: 12px;
   width: auto;
   min-width: 3rem;
-  border: 1px solid ${({ theme }) => theme.bg3};
+  border: 2px solid ${({ theme }) => theme.bg3};
   outline: none;
   background: ${({ theme }) => theme.bg1};
   :hover {
-    border: 1px solid ${({ theme }) => theme.bg4};
+    border: 2px solid ${({ theme }) => theme.bg4};
   }
   :focus {
-    border: 1px solid ${({ theme }) => theme.primary1};
+    border: 2px solid ${({ theme }) => theme.primary1};
   }
 `
 
@@ -64,10 +64,10 @@ const OptionCustom = styled(FancyButton)<{ active?: boolean; warning?: boolean }
   position: relative;
   padding: 0 0.75rem;
   flex: 1;
-  border: ${({ theme, active, warning }) => active && `1px solid ${warning ? theme.red1 : theme.primary1}`};
+  border: ${({ theme, active, warning }) => active && `2px solid ${warning ? theme.red1 : theme.primary1}`};
   :hover {
     border: ${({ theme, active, warning }) =>
-      active && `1px solid ${warning ? darken(0.1, theme.red1) : darken(0.1, theme.primary1)}`};
+      active && `2px solid ${warning ? darken(0.1, theme.red1) : darken(0.1, theme.primary1)}`};
   }
 
   input {
@@ -81,7 +81,7 @@ const OptionCustom = styled(FancyButton)<{ active?: boolean; warning?: boolean }
 const SlippageEmojiContainer = styled.span`
   color: #f3841e;
   ${({ theme }) => theme.mediaWidth.upToSmall`
-    display: none;  
+    display: none;
   `}
 `
 
@@ -148,7 +148,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
     <AutoColumn gap="md">
       <AutoColumn gap="sm">
         <RowFixed>
-          <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
+          <TYPE.black fontWeight={400} fontSize={18} color={theme.text2}>
             Slippage tolerance
           </TYPE.black>
           <QuestionHelper text="Your transaction will revert if the price changes unfavorably by more than this percentage." />
@@ -209,7 +209,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
         {!!slippageError && (
           <RowBetween
             style={{
-              fontSize: '14px',
+              fontSize: '18px',
               paddingTop: '7px',
               color: slippageError === SlippageError.InvalidInput ? 'red' : '#F3841E'
             }}
@@ -225,7 +225,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
 
       <AutoColumn gap="sm">
         <RowFixed>
-          <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
+          <TYPE.black fontSize={18} fontWeight={400} color={theme.text2}>
             Transaction deadline
           </TYPE.black>
           <QuestionHelper text="Your transaction will revert if it is pending for more than this long." />
@@ -242,7 +242,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
               onChange={e => parseCustomDeadline(e.target.value)}
             />
           </OptionCustom>
-          <TYPE.body style={{ paddingLeft: '8px' }} fontSize={14}>
+          <TYPE.body style={{ paddingLeft: '8px' }} fontSize={18}>
             minutes
           </TYPE.body>
         </RowFixed>

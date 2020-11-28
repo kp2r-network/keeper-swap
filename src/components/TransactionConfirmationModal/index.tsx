@@ -52,7 +52,7 @@ function ConfirmationPendingContent({ onDismiss, pendingText }: { onDismiss: () 
             Waiting For Confirmation
           </Text>
           <AutoColumn gap="12px" justify={'center'}>
-            <Text fontWeight={600} fontSize={14} color="" textAlign="center">
+            <Text fontWeight={600} fontSize={18} color="" textAlign="center">
               {pendingText}
             </Text>
           </AutoColumn>
@@ -93,7 +93,7 @@ function TransactionSubmittedContent({
 
           {chainId && hash && (
             <ExternalLink href={getEtherscanLink(chainId, hash, 'transaction')}>
-              <Text fontWeight={500} fontSize={14} color={theme.primary1}>
+              <Text fontWeight={500} fontSize={18} color={theme.primary1}>
                 View on Etherscan
               </Text>
             </ExternalLink>

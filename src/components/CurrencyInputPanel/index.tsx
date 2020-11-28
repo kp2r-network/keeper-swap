@@ -92,7 +92,7 @@ const StyledTokenName = styled.span<{ active?: boolean }>`
 const StyledBalanceMax = styled.button`
   height: 28px;
   background-color: ${({ theme }) => theme.primary5};
-  border: 1px solid ${({ theme }) => theme.primary5};
+  border: 2px solid ${({ theme }) => theme.primary5};
   border-radius: 0.5rem;
   font-size: 0.875rem;
 
@@ -101,10 +101,10 @@ const StyledBalanceMax = styled.button`
   margin-right: 0.5rem;
   color: ${({ theme }) => theme.primaryText1};
   :hover {
-    border: 1px solid ${({ theme }) => theme.primary1};
+    border: 2px solid ${({ theme }) => theme.primary1};
   }
   :focus {
-    border: 1px solid ${({ theme }) => theme.primary1};
+    border: 2px solid ${({ theme }) => theme.primary1};
     outline: none;
   }
 
@@ -163,7 +163,7 @@ export default function CurrencyInputPanel({
         {!hideInput && (
           <LabelRow>
             <RowBetween>
-              <TYPE.body color={theme.text2} fontWeight={500} fontSize={14}>
+              <TYPE.body color={theme.text2} fontWeight={500} fontSize={18}>
                 {label}
               </TYPE.body>
               {account && (
@@ -171,7 +171,7 @@ export default function CurrencyInputPanel({
                   onClick={onMax}
                   color={theme.text2}
                   fontWeight={500}
-                  fontSize={14}
+                  fontSize={18}
                   style={{ display: 'inline', cursor: 'pointer' }}
                 >
                   {!hideBalance && !!currency && selectedCurrencyBalance

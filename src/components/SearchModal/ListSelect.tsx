@@ -37,7 +37,7 @@ const PopoverContainer = styled.div<{ show: boolean }>`
   opacity: ${props => (props.show ? 1 : 0)};
   transition: visibility 150ms linear, opacity 150ms linear;
   background: ${({ theme }) => theme.bg2};
-  border: 1px solid ${({ theme }) => theme.bg3};
+  border: 2px solid ${({ theme }) => theme.bg3};
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.01);
   color: ${({ theme }) => theme.text2};
@@ -62,7 +62,7 @@ const StyledListUrlText = styled.div`
   max-width: 160px;
   opacity: 0.6;
   margin-right: 0.5rem;
-  font-size: 14px;
+  font-size: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
 `
@@ -183,7 +183,7 @@ const ListRow = memo(function ListRow({ listUrl, onBack }: { listUrl: string; on
             width: '2rem',
             padding: '.8rem .35rem',
             borderRadius: '12px',
-            fontSize: '14px',
+            fontSize: '18px',
             marginRight: '0.5rem'
           }}
           onClick={toggle}
@@ -210,7 +210,7 @@ const ListRow = memo(function ListRow({ listUrl, onBack }: { listUrl: string; on
         <ButtonPrimary
           disabled={true}
           className="select-button"
-          style={{ width: '5rem', minWidth: '5rem', padding: '0.5rem .35rem', borderRadius: '12px', fontSize: '14px' }}
+          style={{ width: '5rem', minWidth: '5rem', padding: '0.5rem .35rem', borderRadius: '12px', fontSize: '18px' }}
         >
           Selected
         </ButtonPrimary>
@@ -223,7 +223,7 @@ const ListRow = memo(function ListRow({ listUrl, onBack }: { listUrl: string; on
               minWidth: '4.5rem',
               padding: '0.5rem .35rem',
               borderRadius: '12px',
-              fontSize: '14px'
+              fontSize: '18px'
             }}
             onClick={selectThisList}
           >

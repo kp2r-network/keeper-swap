@@ -19,7 +19,7 @@ const Base = styled(RebassButton)<{
   border-radius: 20px;
   border-radius: ${({ borderRadius }) => borderRadius && borderRadius};
   outline: none;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   color: white;
   text-decoration: none;
   display: flex;
@@ -57,7 +57,7 @@ export const ButtonPrimary = styled(Base)`
     color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? 'white' : theme.text3)};
     cursor: auto;
     box-shadow: none;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     outline: none;
     opacity: ${({ altDisabledStyle }) => (altDisabledStyle ? '0.7' : '1')};
   }
@@ -85,7 +85,7 @@ export const ButtonLight = styled(Base)`
       cursor: auto;
       background-color: ${({ theme }) => theme.primary5};
       box-shadow: none;
-      border: 1px solid transparent;
+      border: 2px solid transparent;
       outline: none;
     }
   }
@@ -157,7 +157,7 @@ export const ButtonPink = styled(Base)`
 `
 
 export const ButtonOutlined = styled(Base)`
-  border: 1px solid ${({ theme }) => theme.bg2};
+  border: 2px solid ${({ theme }) => theme.bg6};
   background-color: transparent;
   color: ${({ theme }) => theme.text1};
 
@@ -199,7 +199,7 @@ export const ButtonEmpty = styled(Base)`
 `
 
 export const ButtonWhite = styled(Base)`
-  border: 1px solid #edeef2;
+  border: 2px solid #edeef2;
   background-color: ${({ theme }) => theme.bg1};
   color: black;
 
@@ -222,7 +222,7 @@ export const ButtonWhite = styled(Base)`
 const ButtonConfirmedStyle = styled(Base)`
   background-color: ${({ theme }) => lighten(0.5, theme.green1)};
   color: ${({ theme }) => theme.green1};
-  border: 1px solid ${({ theme }) => theme.green1};
+  border: 2px solid ${({ theme }) => theme.green1};
 
   &:disabled {
     opacity: 50%;
@@ -232,7 +232,7 @@ const ButtonConfirmedStyle = styled(Base)`
 
 const ButtonErrorStyle = styled(Base)`
   background-color: ${({ theme }) => theme.red1};
-  border: 1px solid ${({ theme }) => theme.red1};
+  border: 2px solid ${({ theme }) => theme.red1};
 
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.red1)};
@@ -250,7 +250,7 @@ const ButtonErrorStyle = styled(Base)`
     cursor: auto;
     box-shadow: none;
     background-color: ${({ theme }) => theme.red1};
-    border: 1px solid ${({ theme }) => theme.red1};
+    border: 2px solid ${({ theme }) => theme.red1};
   }
 `
 

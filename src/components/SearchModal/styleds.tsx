@@ -14,7 +14,7 @@ export const ModalInfo = styled.div`
 
 export const FadedSpan = styled(RowFixed)`
   color: ${({ theme }) => theme.primary1};
-  font-size: 14px;
+  font-size: 18px;
 `
 
 export const PaddedColumn = styled(AutoColumn)`
@@ -39,17 +39,17 @@ export const MenuItem = styled(RowBetween)`
 export const SearchInput = styled.input`
   position: relative;
   display: flex;
-  padding: 16px;
+  padding: 10px;
   align-items: center;
   width: 100%;
   white-space: nowrap;
   background: none;
   border: none;
   outline: none;
-  border-radius: 20px;
+  border-radius: 8px;
   color: ${({ theme }) => theme.text1};
   border-style: solid;
-  border: 1px solid ${({ theme }) => theme.bg3};
+  border: 2px solid ${({ theme }) => theme.bg3};
   -webkit-appearance: none;
 
   font-size: 18px;
@@ -59,7 +59,7 @@ export const SearchInput = styled.input`
   }
   transition: border 100ms;
   :focus {
-    border: 1px solid ${({ theme }) => theme.primary1};
+    border: 2px solid ${({ theme }) => theme.primary1};
     outline: none;
   }
 `

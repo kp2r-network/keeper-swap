@@ -49,9 +49,10 @@ export function colors(darkMode: boolean): Colors {
     // backgrounds / greys
     bg1: darkMode ? '#2C3040' : '#FFFFFF',
     bg2: darkMode ? '#232733' : '#e7ebf4',
-    bg3: darkMode ? '#3d4359' : '#fff8fb',
+    bg3: darkMode ? '#3d4359' : '#c6c9d6',
     bg4: darkMode ? '#515872' : '#D6DCDD',
     bg5: darkMode ? '#9699a2' : '#888D9B',
+    bg6: darkMode ? '#ff2d82' : '#e7ebf4',
 
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
@@ -62,7 +63,7 @@ export function colors(darkMode: boolean): Colors {
     primary1: darkMode ? '#ff2d82' : '#ff2d82',
     primary2: darkMode ? '#3680E7' : '#FF8CC3',
     primary3: darkMode ? '#4D8FEA' : '#FF99C9',
-    primary4: darkMode ? '#218a8170' : '#06938550',
+    primary4: darkMode ? '#3d435970' : '#f6d3ea50',
     primary5: darkMode ? '#3f4458' : '#ffe1f5',
 
     // color text
@@ -137,16 +138,16 @@ export const TYPE = {
     return <TextWrapper fontWeight={500} color={'text1'} {...props} />
   },
   body(props: TextProps) {
-    return <TextWrapper fontWeight={400} fontSize={18} color={'text1'} {...props} />
+    return <TextWrapper fontWeight={400} fontSize={20} color={'text1'} {...props} />
   },
   largeHeader(props: TextProps) {
-    return <TextWrapper fontWeight={600} fontSize={26} {...props} />
+    return <TextWrapper fontWeight={600} fontSize={28} {...props} />
   },
   mediumHeader(props: TextProps) {
-    return <TextWrapper fontWeight={500} fontSize={22} {...props} />
+    return <TextWrapper fontWeight={500} fontSize={24} {...props} />
   },
   subHeader(props: TextProps) {
-    return <TextWrapper fontWeight={400} fontSize={16} {...props} />
+    return <TextWrapper fontWeight={400} fontSize={18} {...props} />
   },
   blue(props: TextProps) {
     return <TextWrapper fontWeight={500} color={'primary1'} {...props} />
@@ -161,7 +162,7 @@ export const TYPE = {
     return <TextWrapper fontWeight={500} color={'bg3'} {...props} />
   },
   italic(props: TextProps) {
-    return <TextWrapper fontWeight={500} fontSize={14} fontStyle={'italic'} color={'text2'} {...props} />
+    return <TextWrapper fontWeight={500} fontSize={18} fontStyle={'italic'} color={'text2'} {...props} />
   },
   error({ error, ...props }: { error: boolean } & TextProps) {
     return <TextWrapper fontWeight={500} color={error ? 'red1' : 'text2'} {...props} />

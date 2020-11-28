@@ -54,7 +54,7 @@ const UpperSection = styled.div`
 
 const InfoCard = styled.div`
   padding: 1rem;
-  border: 1px solid ${({ theme }) => theme.bg3};
+  border: 2px solid ${({ theme }) => theme.bg3};
   border-radius: 20px;
   position: relative;
   display: grid;
@@ -132,10 +132,10 @@ const AccountControl = styled.div`
 `
 
 const AddressLink = styled(ExternalLink)<{ hasENS: boolean; isENS: boolean }>`
-  font-size: 0.825rem;
+  font-size: 1.2rem;
   color: ${({ theme }) => theme.text3};
   margin-left: 1rem;
-  font-size: 0.825rem;
+  font-size: 1.2rem;
   display: flex;
   :hover {
     color: ${({ theme }) => theme.text2};
@@ -160,7 +160,7 @@ const CloseColor = styled(Close)`
 
 const WalletName = styled.div`
   width: initial;
-  font-size: 0.825rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: ${({ theme }) => theme.text3};
 `
@@ -188,7 +188,7 @@ const WalletAction = styled(ButtonSecondary)`
   width: fit-content;
   font-weight: 400;
   margin-left: 8px;
-  font-size: 0.825rem;
+  font-size: 1.2rem;
   padding: 4px 6px;
   :hover {
     cursor: pointer;
@@ -304,7 +304,7 @@ export default function AccountDetails({
                 <div>
                   {connector !== injected && connector !== walletlink && (
                     <WalletAction
-                      style={{ fontSize: '.825rem', fontWeight: 400, marginRight: '8px' }}
+                      style={{ fontSize: '1.2', fontWeight: 400, marginRight: '8px' }}
                       onClick={() => {
                         ;(connector as any).close()
                       }}
@@ -313,7 +313,7 @@ export default function AccountDetails({
                     </WalletAction>
                   )}
                   <WalletAction
-                    style={{ fontSize: '.825rem', fontWeight: 400 }}
+                    style={{ fontSize: '1.2', fontWeight: 400 }}
                     onClick={() => {
                       openOptions()
                     }}

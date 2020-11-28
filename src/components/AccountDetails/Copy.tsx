@@ -10,7 +10,7 @@ const CopyIcon = styled(LinkStyledButton)`
   flex-shrink: 0;
   display: flex;
   text-decoration: none;
-  font-size: 0.825rem;
+  font-size: 1.2rem;
   :hover,
   :active,
   :focus {
@@ -20,7 +20,7 @@ const CopyIcon = styled(LinkStyledButton)`
 `
 const TransactionStatusText = styled.span`
   margin-left: 0.25rem;
-  font-size: 0.825rem;
+  font-size: 1.2rem;
   ${({ theme }) => theme.flexRowNoWrap};
   align-items: center;
 `

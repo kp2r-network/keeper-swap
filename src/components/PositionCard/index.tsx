@@ -26,9 +26,9 @@ export const FixedHeightRow = styled(RowBetween)`
 `
 
 export const HoverCard = styled(Card)`
-  border: 1px solid ${({ theme }) => theme.bg2};
+  border: 2px solid ${({ theme }) => theme.bg6};
   :hover {
-    border: 1px solid ${({ theme }) => darken(0.06, theme.bg2)};
+    border: 2px solid ${({ theme }) => darken(0.06, theme.bg6)};
   }
 `
 
