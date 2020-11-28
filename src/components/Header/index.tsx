@@ -7,8 +7,8 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { darken } from 'polished'
 
-import Logo from '../../assets/svg/omgswap-green.png'
-import LogoDark from '../../assets/svg/omgswap-green.png'
+import Logo from '../../assets/svg/wordmark.svg'
+import LogoDark from '../../assets/svg/wordmark_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
@@ -211,7 +211,7 @@ export default function Header() {
         <HeaderElement>
           <Title href=".">
             <UniIcon>
-              <img src={isDark ? LogoDark : Logo} alt="logo" />
+              <img src={isDark ? LogoDark : Logo} alt="logo" height="32px" />
             </UniIcon>
             </Title>
         </HeaderElement>
