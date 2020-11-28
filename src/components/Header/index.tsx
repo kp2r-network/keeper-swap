@@ -17,7 +17,6 @@ import Menu from '../Menu'
 
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
-import VersionSwitch from './VersionSwitch'
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -154,7 +153,6 @@ export default function Header() {
             </AccountElement>
           </HeaderElement>
           <HeaderElementWrap>
-            <VersionSwitch />
             <Settings />
             <Menu />
           </HeaderElementWrap>

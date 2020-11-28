@@ -42,16 +42,16 @@ export function colors(darkMode: boolean): Colors {
 
     // text
     text1: darkMode ? '#FFFFFF' : '#000000',
-    text2: darkMode ? '#CCD5D5' : '#555858',
+    text2: darkMode ? '#c6c9d6' : '#515872',
     text3: darkMode ? '#788988' : '#888D9B',
-    text4: darkMode ? '#555858' : '#CCD5D5',
-    text5: darkMode ? '#313333' : '#E3E9EA',
+    text4: darkMode ? '#515872' : '#c6c9d6',
+    text5: darkMode ? '#232733' : '#fff8fb',
 
     // backgrounds / greys
-    bg1: darkMode ? '#242626' : '#FFFFFF',
-    bg2: darkMode ? '#313333' : '#F7F8FA',
-    bg3: darkMode ? '#424747' : '#E3E9EA',
-    bg4: darkMode ? '#555858' : '#D6DCDD',
+    bg1: darkMode ? '#2C3040' : '#FFFFFF',
+    bg2: darkMode ? '#232733' : '#e7ebf4',
+    bg3: darkMode ? '#3d4359' : '#fff8fb',
+    bg4: darkMode ? '#515872' : '#D6DCDD',
     bg5: darkMode ? '#788988' : '#888D9B',
 
     //specialty colors
@@ -59,17 +59,17 @@ export function colors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#009285' : '#069386',
+    primary1: darkMode ? '#ff2d82' : '#ff2d82',
     primary2: darkMode ? '#3680E7' : '#FF8CC3',
     primary3: darkMode ? '#4D8FEA' : '#FF99C9',
     primary4: darkMode ? '#218a8170' : '#06938550',
-    primary5: darkMode ? '#435151' : '#D5EDEA',
+    primary5: darkMode ? '#3f4458' : '#ffe1f5',
 
     // color text
-    primaryText1: darkMode ? '#2BB7AA' : '#069386',
+    primaryText1: darkMode ? '#ff2d82' : '#ff2d82',
 
     // secondary colors
-    secondary1: darkMode ? '#009285' : '#069386',
+    secondary1: darkMode ? '#ff2d82' : '#ff2d82',
     secondary2: darkMode ? '#17000b26' : '#06938550',
     secondary3: darkMode ? '#17000b26' : '#EEFFFD',
 
@@ -137,16 +137,16 @@ export const TYPE = {
     return <TextWrapper fontWeight={500} color={'text1'} {...props} />
   },
   body(props: TextProps) {
-    return <TextWrapper fontWeight={400} fontSize={16} color={'text1'} {...props} />
+    return <TextWrapper fontWeight={400} fontSize={18} color={'text1'} {...props} />
   },
   largeHeader(props: TextProps) {
-    return <TextWrapper fontWeight={600} fontSize={24} {...props} />
+    return <TextWrapper fontWeight={600} fontSize={26} {...props} />
   },
   mediumHeader(props: TextProps) {
-    return <TextWrapper fontWeight={500} fontSize={20} {...props} />
+    return <TextWrapper fontWeight={500} fontSize={22} {...props} />
   },
   subHeader(props: TextProps) {
-    return <TextWrapper fontWeight={400} fontSize={14} {...props} />
+    return <TextWrapper fontWeight={400} fontSize={16} {...props} />
   },
   blue(props: TextProps) {
     return <TextWrapper fontWeight={500} color={'primary1'} {...props} />
@@ -161,7 +161,7 @@ export const TYPE = {
     return <TextWrapper fontWeight={500} color={'bg3'} {...props} />
   },
   italic(props: TextProps) {
-    return <TextWrapper fontWeight={500} fontSize={12} fontStyle={'italic'} color={'text2'} {...props} />
+    return <TextWrapper fontWeight={500} fontSize={14} fontStyle={'italic'} color={'text2'} {...props} />
   },
   error({ error, ...props }: { error: boolean } & TextProps) {
     return <TextWrapper fontWeight={500} color={error ? 'red1' : 'text2'} {...props} />
@@ -170,13 +170,13 @@ export const TYPE = {
 
 export const FixedGlobalStyle = createGlobalStyle`
 html, input, textarea, button {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Teko', sans-serif;
   letter-spacing: -0.018em;
   font-display: fallback;
 }
 @supports (font-variation-settings: normal) {
   html, input, textarea, button {
-    font-family: 'Inter var', sans-serif;
+    font-family: 'Teko', sans-serif;
   }
 }
 
