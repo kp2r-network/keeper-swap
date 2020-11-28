@@ -113,7 +113,6 @@ const StyledNavLink = styled(NavLink).attrs({
 })`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
-  border-radius: 3rem;
   outline: none;
   cursor: pointer;
   text-decoration: none;
@@ -123,13 +122,14 @@ const StyledNavLink = styled(NavLink).attrs({
   margin: 0 12px;
   font-weight: 500;
   &.${activeClassName} {
-    border-radius: 12px;
     font-weight: 600;
     color: ${({ theme }) => theme.text1};
+    border-bottom: 3px solid #FF2D82;
   }
   :hover,
   :focus {
     color: ${({ theme }) => darken(0.1, theme.text1)};
+    border-bottom: 3px solid #394053;
   }
   ${({ theme }) => theme.mediaWidth.upToSmall`
       margin: 0 4px;
@@ -141,7 +141,6 @@ const StyledExternalLink = styled(ExternalLink).attrs({
 })<{ isActive?: boolean }>`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
-  border-radius: 3rem;
   outline: none;
   cursor: pointer;
   text-decoration: none;
@@ -151,13 +150,14 @@ const StyledExternalLink = styled(ExternalLink).attrs({
   margin: 0 12px;
   font-weight: 500;
   &.${activeClassName} {
-    border-radius: 12px;
     font-weight: 600;
     color: ${({ theme }) => theme.text1};
+    border-bottom: 3px solid #FF2D82;
   }
   :hover,
   :focus {
     color: ${({ theme }) => darken(0.1, theme.text1)};
+    border-bottom: 3px solid #394053;
   }
   ${({ theme }) => theme.mediaWidth.upToSmall`
       margin: 0 4px;

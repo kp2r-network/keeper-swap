@@ -56,6 +56,7 @@ export function colors(darkMode: boolean): Colors {
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
+    border: darkMode ? 'rgba(59, 66, 86 , 0.9)' : 'rgba(197, 210, 237 , 0.9)',
 
     //primary colors
     primary1: darkMode ? '#ff2d82' : '#ff2d82',
