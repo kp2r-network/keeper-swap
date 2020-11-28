@@ -31,7 +31,7 @@ export default function BetterTradeLink({ version }: { version: Version }) {
         <Text lineHeight="145.23%;" fontSize={18} fontWeight={400} color={theme.text1}>
           There is a better price for this trade on{' '}
           <StyledInternalLink to={linkDestination}>
-            <b>OMGSwap {version.toUpperCase()} ↗</b>
+            <b>KeeperSwap {version.toUpperCase()} ↗</b>
           </StyledInternalLink>
         </Text>
       </AutoColumn>
