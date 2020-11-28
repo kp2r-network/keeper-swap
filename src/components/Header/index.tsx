@@ -241,7 +241,7 @@ export default function Header() {
          <StyledExternalLink id={`stake-nav-link`} href={'https://feed.kp2r.network/'}>
            Feed
          </StyledExternalLink>
-         <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
+         <StyledExternalLink id={`stake-nav-link`} href={'https://info.uniswap.org/pair/0xbf89051f8d04ad770e2231e9335d3b7483a0a51f'}>
            Charts
          </StyledExternalLink>
         </HeaderNav>
