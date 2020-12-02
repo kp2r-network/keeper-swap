@@ -42,7 +42,7 @@ export default function MigrateV1() {
   const V1Exchanges = useAllTokenV1Exchanges()
   const V1LiquidityTokens: Token[] = useMemo(() => {
     return chainId
-      ? Object.keys(V1Exchanges).map(exchangeAddress => new Token(chainId, exchangeAddress, 18, 'UNI-V1', 'OMGSwap V1'))
+      ? Object.keys(V1Exchanges).map(exchangeAddress => new Token(chainId, exchangeAddress, 18, 'UNI-V1'))
       : []
   }, [chainId, V1Exchanges])
   const [V1LiquidityBalances, V1LiquidityBalancesLoading] = useTokenBalancesWithLoadingIndicator(
@@ -73,7 +73,7 @@ export default function MigrateV1() {
           <BackArrow to="/pool" />
           <TYPE.mediumHeader>Migrate V1 Liquidity</TYPE.mediumHeader>
           <div>
-            <QuestionHelper text="Migrate your liquidity tokens from OMGSwap V1 to OMGSwap V2." />
+            <QuestionHelper text="Migrate your liquidity tokens from OMGSwap V1 to Keeperswap." />
           </div>
         </AutoRow>
 
