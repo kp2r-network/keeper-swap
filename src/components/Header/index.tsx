@@ -235,8 +235,8 @@ export default function Header() {
          <StyledExternalLink id={`stake-nav-link`} href={'https://kp2r.network/keep2r'}>
            Keep2r
          </StyledExternalLink>
-         <StyledExternalLink id={`stake-nav-link`} href={'https://kp2r.network/governance'}>
-           Governance
+         <StyledExternalLink id={`stake-nav-link`} href={'https://snapshot.page/#/keep2r.eth'}>
+           Vote
          </StyledExternalLink>
          <StyledExternalLink id={`stake-nav-link`} href={'https://feed.kp2r.network/'}>
            Feed
